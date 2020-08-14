@@ -11,7 +11,7 @@ also called dementias.
 Neurodegenerative diseases affect millions of people worldwide. Alzheimer’s disease and
 Parkinson’s disease are the most common neurodegenerative diseases. In 2016, an
 estimated 5.4 million Americans were living with Alzheimer’s disease. An estimated
-930,000 people in the United States could be living with Parkinson’s disease by 2020.ma
+930,000 people in the United States could be living with Parkinson’s disease by 2020.
 
 The goal of this project is to build a model to accurately predict the presence of a
 neurodegenerative disease in an individual as early detection of a neurodegenerative
@@ -119,7 +119,7 @@ ax = sns.heatmap(df.corr(), annot=True);
 
 ![](./images/df_heatmap.png)
 
-5.   Plot using pie chart.
+5.   Plot status column using pie chart.
 
 ```
 # Plot using pie chart
@@ -153,7 +153,7 @@ rmse = np.sqrt(mean_squared_error(y_test, preds))
 print("RMSE: %f" % (rmse))
 ```
 
-We got the RMSE score: 0.226455
+We got the RMSE score: 0.226455.
 
 ## Tree Visualization and Important Features
 XGBoost has `plot_tree()` funtion that allow us to plot the fully boosted tree from our model.
@@ -188,3 +188,13 @@ kfold = KFold(n_splits=10, random_state=43)
 results = cross_val_score(model, X, y, cv=kfold)
 print("Accuracy: %.2f%% (%.2f%%)" % (results.mean()*100, results.std()*100))
 ```
+
+## Reference
+'Exploiting Nonlinear Recurrence and Fractal Scaling Properties for Voice Disorder Detection', Little MA, McSharry PE, Roberts SJ, Costello DAE, Moroz IM. BioMedical Engineering OnLine 2007, 6:23 (26 June 2007)  
+[Display full dataframe](https://stackoverflow.com/questions/11707586/how-do-i-expand-the-output-display-to-see-more-columns-of-a-pandas-dataframe)  
+[Move column in dataframe](https://stackoverflow.com/questions/25122099/move-column-by-name-to-front-of-table-in-pandas)  
+[Xgboost in Python](https://www.datacamp.com/community/tutorials/xgboost-in-python)  
+
+---
+
+For the blog, you can refer [here](https://www.datainsightonline.com/post/xgboost_predicting-parkinson-diseases)
